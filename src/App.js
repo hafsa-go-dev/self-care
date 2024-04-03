@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Mind from "./Mind";
+import Body from "./Body";
+import Soul from "./Soul";
+import MindContainer from "./MindContainer";
+import BodyContainer from "./BodyContainer";
+import SoulContainer from "./SoulContainer";
+import {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+
+    const [aspect, setAspect] = useState(null);
+
+    return <div className="app">
+        <div className="app-header">
+            <h1><em>What part of you is in need of care right now?</em></h1>
+        </div>
+        <div className="app-content">
+            <Mind id={"mind"} aspect={aspect} setAspect={setAspect}/>
+            <Body id={"body"} aspect={aspect} setAspect={setAspect}/>
+            <Soul id={"soul"} aspect={aspect} setAspect={setAspect}/>
+        </div>
+        {aspect !== null ?
+            <div className="app-elaborate">
+                {aspect === "mind" && <MindContainer/>}
+                {aspect === "body" && <BodyContainer/>}
+                {aspect === "soul" && <SoulContainer/>}
+            </div>
+            :
+            <></>
+        }
+    </div>;
 }
-
-export default App;

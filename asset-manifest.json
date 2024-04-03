@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/self-care/static/css/main.5c5c55ef.css",
+    "main.js": "/self-care/static/js/main.61610628.js",
+    "index.html": "/self-care/index.html",
+    "main.5c5c55ef.css.map": "/self-care/static/css/main.5c5c55ef.css.map",
+    "main.61610628.js.map": "/self-care/static/js/main.61610628.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c5c55ef.css",
+    "static/js/main.61610628.js"
+  ]
+}
